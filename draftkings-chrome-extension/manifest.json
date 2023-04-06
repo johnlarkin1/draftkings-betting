@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Draftkings Export",
+  "description": "Export your draftkings bet for further inference",
+  "version": "1.0",
+  "icons": {
+    "32": "images/icon-32.png"
+  },
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
